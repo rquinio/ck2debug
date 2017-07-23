@@ -1,0 +1,67 @@
+# FROM is the decision taker
+# ROOT is the targeted settlement
+settlement_decisions = {
+
+	debug_show_province_id = {
+		filter = all
+		ai_target_filter = owned
+		
+		from_potential = {
+		}
+		
+		potential = {
+		}
+		allow = {
+			always = no
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_spawn_army = {
+		filter = all
+		ai_target_filter = owned
+		
+		from_potential = {
+		}
+		
+		potential = {
+		}
+		allow = {
+		}
+		
+		effect = {
+			location = {
+				FROM = {
+					spawn_unit = {
+						owner = THIS
+						leader = THIS
+						province = PREV
+						home = PREV
+						troops = {
+							heavy_infantry = { 2000 2000 }
+							knights = { 5000 5000 }
+							light_cavalry = { 2000 2000 }
+							archers = { 1000 1000 }
+						}
+						merge = yes
+					}
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

@@ -1,0 +1,73 @@
+namespace = debug
+
+# on_death
+character_event = {
+	id = debug.1
+	
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		log="(DEBUG) [Root.GetBestName] [Root.GetDeathReason] at age [Root.GetAgeYears] in [Root.Location.GetName]."
+	}
+}
+
+# on_new_holder
+character_event = {
+	id = debug.2
+	
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		log="(DEBUG) [Root.GetBestName] is the new holder of [From.GetName], previously owned by [FromFrom.GetBestName]."
+	}
+}
+
+# on_new_holder_inheritance
+character_event = {
+	id = debug.3
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		log="(DEBUG) [Root.GetBestName] has inherited [From.GetName] from [FromFrom.GetBestName]."
+	}
+}
+
+# on_new_holder_usurpation
+character_event = {
+	id = debug.4
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		log="(DEBUG) [Root.GetBestName] has usurped [From.GetName] from [FromFrom.GetBestName]."
+	}
+}
+
+# on_exiled
+character_event = {
+	id = debug.5
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		log="(DEBUG) [Root.GetBestName] has been exiled."
+	}
+}
+
+# on_create_title
+character_event = {
+	id = debug.6
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		log="(DEBUG) [Root.GetBestName] has created the title [From.GetName]."
+	}
+}

@@ -1,0 +1,191 @@
+# Title decisions are possible vs _all_ titles and are shown in the Title Diplomacy View, not the Intrigue View. The taker is in the FROM scope.
+#
+# filter = [capital/primary_title/owned/vassal_owned/sub_realm_owned/realm_owned/dynasty_owned/all]
+# ai_target_filter = [capital/primary_title/owned/vassal_owned/sub_realm_owned/realm_owned/dynasty_owned/all] (which titles for which the AI evaluates the decision.)
+#	owned: all titles owned by the AI
+#	vassal_owned: all titles owned by direct vassal rulers of the AI's employer
+#	sub_realm_owned: all titles below the AI's employer
+#	realm_owned: all titles in the same top realm as the AI
+#	dynasty_owned: all titles owned by members of the same dynasty
+#	all: all titles (Avoid if possible. VERY CPU-HEAVY!)
+
+title_decisions = {
+
+	debug_usurp_title = {
+		filter = all
+		ai_target_filter = capital
+		
+		from_potential = {
+			ai = no
+		}
+		potential = {
+		}
+		allow = {
+		}
+		effect = {
+			FROM = {
+				usurp_title = ROOT
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_usurp_all_de_jure_title = {
+		filter = all
+		ai_target_filter = capital
+		
+		from_potential = {
+			ai = no
+		}
+		potential = {
+		}
+		allow = {
+		}
+		effect = {
+			any_de_jure_vassal_title = {
+				limit = {
+					NOT = { is_vassal_or_below = FROM }
+				}
+				FROM = {
+					usurp_title = PREV
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	debug_make_de_jure = {
+		filter = sub_realm_owned
+		ai_target_filter = capital
+		
+		from_potential = {
+			ai = no
+		}
+		potential = {
+		}
+		allow = {
+			tier = DUKE
+			FROM = {
+				primary_title = {
+					higher_tier_than = DUKE
+					is_titular = no
+				}
+			}
+		}
+		effect = {
+			FROM = {
+				primary_title = {
+					ROOT = {
+						de_jure_liege = PREV
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_destroy_title = {
+		filter = all
+		ai_target_filter = capital
+		
+		from_potential = {
+			ai = no
+		}
+		potential = {
+		}
+		allow = {
+		}
+		effect = {
+			destroy_landed_title = THIS
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_create_trade_post = {
+		filter = all
+		ai_target_filter = capital
+		
+		from_potential = {
+			ai = no
+		}
+		potential = {
+		}
+		allow = {
+			tier = COUNT
+		}
+		effect = {
+			create_tradepost = yes
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		} 
+	}
+	
+	debug_deactivate_title = {
+		filter = all
+		ai_target_filter = capital
+		
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			is_title_active = yes
+		}
+		allow = {
+		}
+		effect = {
+			activate_title = { title = THIS status = no }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_gain_claim_title = {
+		filter = all
+		ai_target_filter = capital
+		
+		from_potential = {
+			ai = no
+		}
+		potential = {
+		}
+		allow = {
+		}
+		effect = {
+			add_claim = FROM
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}	
+}

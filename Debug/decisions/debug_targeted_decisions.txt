@@ -1,0 +1,296 @@
+# FROM is the taker
+# ROOT is the target
+targetted_decisions = {
+
+	debug_vassalize = {
+		ai_target_filter = self
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			lower_tier_than = FROM
+		}
+		allow = {
+		}
+		effect = {
+			set_defacto_liege = FROM
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_grant_independence = {
+		ai_target_filter = self
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			FROM = {
+				is_vassal_or_below = ROOT
+			}
+			
+		}
+		allow = {
+		}
+		effect = {
+			set_defacto_liege = THIS
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_usurp = {
+		ai_target_filter = self
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			OR = { 
+				lower_tier_than = FROM
+				tier = FROM
+			}
+		}
+		allow = {
+		}
+		effect = {
+			any_demesne_title = {
+				usurp_title_plus_barony_if_unlanded_and_vassals = FROM
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_convert_religion = {
+		ai_target_filter = self
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			NOT = { religion = FROM }
+		}
+		allow = {
+		}
+		effect = {
+			unsafe_religion = FROM
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_convert_culture = {
+		ai_target_filter = self
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			NOT = { culture = FROM }
+		}
+		allow = {
+		}
+		effect = {
+			culture = FROM
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_convert_capital_religion = {
+		ai_target_filter = self
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			capital_scope = {
+				NOT = { religion = FROM }
+			}
+		}
+		allow = {
+		}
+		effect = {
+			capital_scope = {
+				religion = FROM
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_convert_capital_culture = {
+		ai_target_filter = self
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			capital_scope = {
+				NOT = { culture = FROM }
+			}
+		}
+		allow = {
+		}
+		effect = {
+			capital_scope = {
+				culture = FROM
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_kill = {
+		ai_target_filter = self
+		from_potential = {
+			ai = no
+		}
+		potential = {
+		}
+		allow = {
+		}
+		effect = {
+			death = { death_reason = death_execution killer = FROM } 
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_give_boost = {
+		ai_target_filter = self
+		from_potential = {
+			ai = no
+		}
+		potential = {
+		}
+		allow = {
+		}
+		effect = {
+			piety = 500
+			prestige = 500
+			wealth = 500
+			change_diplomacy = 1
+			change_stewardship = 1
+			change_martial = 1
+			change_intrigue = 1
+			change_learning = 1
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_elevate = {
+		ai_target_filter = self
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			dynasty = none
+		}
+		allow = {
+		}
+		effect = {
+			hidden_tooltip = {
+				create_character = {
+					dynasty = random
+				}
+				
+				new_character = {
+					ROOT = {
+						dynasty = PREV
+					}
+					dynasty = none
+				}
+				random_courtier = {
+					limit = {
+						dynasty = none
+					}
+					new_character = {
+						dynasty = PREV
+					}	
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_make_rival = {
+		ai_target_filter = self
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			NOT = { is_rival = FROM }
+		}
+		allow = {
+		}
+		effect = {
+			add_rival = FROM
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_make_friend = {
+		ai_target_filter = self
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			NOT = { is_friend = FROM }
+		}
+		allow = {
+		}
+		effect = {
+			add_friend = FROM
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

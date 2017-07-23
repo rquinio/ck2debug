@@ -1,0 +1,9 @@
+debug_decrease = {
+	authority = -10
+	years = 30
+}
+
+debug_increase = {
+	authority = 10
+	years = 30
+}

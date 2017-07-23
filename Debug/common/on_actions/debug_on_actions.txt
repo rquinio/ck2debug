@@ -1,0 +1,40 @@
+on_death = {
+	events = {
+		debug.1 # logging
+	}
+}
+
+# ROOT is the creating character
+# FROM is the title
+on_create_title = {
+	events = {
+		debug.6 # logging
+	}
+}
+
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+on_new_holder = {
+	events = {
+		debug.2 # logging
+	}
+}
+
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+on_new_holder_inheritance = {
+	events = {
+		debug.3 # logging
+	}
+}
+
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+on_new_holder_usurpation = {
+	events = {
+		debug.4 # logging
+	}
+}
+
+on_exiled = {
+	events = {
+		debug.5 # logging
+	}
+}

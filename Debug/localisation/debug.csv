@@ -1,0 +1,32 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+debug_show_province_id;(Debug) Province ID: [Root.Location.GetID];;;;;;;;;;;;;x
+debug_show_province_id_desc;Allows to easily access province ID of [Root.Location.GetName];;;;;;;;;;;;;x
+debug_become_independent;(Debug) Become Independent;;;;;;;;;;;;;x
+debug_convert_realm_characters_religion;(Debug) Convert Realm Characters to Religion;;;;;;;;;;;;;x
+debug_convert_realm_characters_culture;(Debug) Convert Realm Characters to Culture;;;;;;;;;;;;;x
+debug_convert_realm_provinves_religion;(Debug) Convert Realm Provinces to Religion;;;;;;;;;;;;;x
+debug_convert_realm_provinves_culture;(Debug) Convert Realm Provinces to Culture;;;;;;;;;;;;;x
+debug_become_king;(Debug) Become King;;;;;;;;;;;;;x
+debug_become_emperor;(Debug) Become Emperor;;;;;;;;;;;;;x
+debug_increase_moral_authority;(Debug) Increase Moral Authority;;;;;;;;;;;;;x
+debug_decrease_moral_authority;(Debug) Decrease Moral Authority;;;;;;;;;;;;;x
+debug_vassalize;(Debug) Vassalize;;;;;;;;;;;;;x
+debug_usurp;(Debug) Usurp Titles;;;;;;;;;;;;;x
+debug_convert_religion;(Debug) Convert Religion;;;;;;;;;;;;;x
+debug_convert_culture;(Debug) Convert Culture;;;;;;;;;;;;;x
+debug_convert_capital_religion;(Debug) Convert Capital Religion;;;;;;;;;;;;;x
+debug_convert_capital_culture;(Debug) Convert Capital Culture;;;;;;;;;;;;;x
+debug_kill;(Debug) Kill;;;;;;;;;;;;;x
+debug_give_boost;(Debug) Give Boost;;;;;;;;;;;;;x
+debug_elevate;(Debug) Elevate;;;;;;;;;;;;;x
+debug_make_rival;(Debug) Make Rival;;;;;;;;;;;;;x
+debug_make_friend;(Debug) Make Friend;;;;;;;;;;;;;x
+debug_usurp_title;(Debug) Usurp;;;;;;;;;;;;;x
+debug_usurp_all_de_jure_title;(Debug) Usurp De Jure;;;;;;;;;;;;;x
+debug_make_de_jure;(Debug) Make De Jure;;;;;;;;;;;;;x
+debug_gain_claim_title;(Debug) Gain Claim;;;;;;;;;;;;;x
+debug_destroy_title;(Debug) Destroy;;;;;;;;;;;;;x
+debug_deactivate_title;(Debug) Deactivate;;;;;;;;;;;;;x
+debug_create_trade_post;(Debug) Create Tradepost;;;;;;;;;;;;;x
+debug_spawn_army;(Debug) Spawn Army;;;;;;;;;;;;;x
+debug_grant_independence;(Debug) Grant Independence;;;;;;;;;;;;;x

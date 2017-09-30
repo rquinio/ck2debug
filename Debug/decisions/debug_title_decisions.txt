@@ -187,5 +187,73 @@ title_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
-	}	
+	}
+
+	make_prosperous = {
+		ai_target_filter = owned
+		filter = owned
+		
+		from_potential = {
+			has_global_flag = ancrel_debug
+		}
+		
+		potential = {
+			location = {
+				NOT = { has_province_modifier = prosperity_modifier_3 }
+			}
+		}
+		
+		allow = { }
+		
+		effect = {
+			location = {
+				if = {
+					limit = {
+						is_depopulated_trigger = yes
+					}
+					decrease_depopulation_effect = yes
+				}
+				if = {
+					limit = {
+						OR = {
+							is_prosperous_trigger = yes
+							is_depopulated_trigger = no
+						}
+					}
+					increase_prosperity_effect = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0 # debug only!
+		}
+	}
+
+	depopulate = {
+		ai_target_filter = owned
+		filter = owned
+		
+		from_potential = {
+			has_global_flag = ancrel_debug
+		}
+		
+		potential = {
+			location = {
+				NOT = {
+					has_province_modifier = depopulated_3
+				}
+			}
+		}
+		
+		allow = { }
+		
+		effect = {
+			location = { decrease_prosperity_effect = yes}
+		}
+		
+		ai_will_do = {
+			factor = 0 # debug only!
+		}
+	}
 }

@@ -255,4 +255,79 @@ decisions = {
 			factor = 0
 		}
 	}
+
+	debug_gain_society_currency_trivial = {
+		potential = {
+			ai = no
+		}
+		allow = {
+			is_in_society = yes
+		}
+		effect = {
+			add_society_currency_trivial_effect = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	debug_gain_society_currency_minor = {
+		potential = {
+			ai = no
+		}
+		allow = {
+			is_in_society = yes
+		}
+		effect = {
+			add_society_currency_minor_effect = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	debug_gain_society_currency_medium = {
+		potential = {
+			ai = no
+		}
+		allow = {
+			is_in_society = yes
+		}
+		effect = {
+			add_society_currency_medium_effect = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	debug_gain_society_currency_major = {
+		potential = {
+			ai = no
+		}
+		allow = {
+			is_in_society = yes
+		}
+		effect = {
+			add_society_currency_major_effect = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	debug_gain_society_currency_massive = {
+		potential = {
+			ai = no
+		}
+		allow = {
+			is_in_society = yes
+		}
+		effect = {
+			add_society_currency_massive_effect = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 }

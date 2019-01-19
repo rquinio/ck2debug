@@ -5,6 +5,7 @@ settlement_decisions = {
 	debug_show_province_id = {
 		filter = all
 		ai_target_filter = owned
+		diplomacy_icon = GFX_debug_decision
 		
 		from_potential = {
 		}
@@ -27,6 +28,7 @@ settlement_decisions = {
 	debug_spawn_army = {
 		filter = all
 		ai_target_filter = owned
+		diplomacy_icon = GFX_debug_decision
 		
 		from_potential = {
 		}

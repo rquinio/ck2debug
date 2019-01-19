@@ -14,6 +14,7 @@ title_decisions = {
 	debug_usurp_title = {
 		filter = all
 		ai_target_filter = capital
+		diplomacy_icon = GFX_debug_decision
 		
 		from_potential = {
 			ai = no
@@ -38,6 +39,7 @@ title_decisions = {
 	debug_usurp_all_de_jure_title = {
 		filter = all
 		ai_target_filter = capital
+		diplomacy_icon = GFX_debug_decision
 		
 		from_potential = {
 			ai = no
@@ -67,6 +69,7 @@ title_decisions = {
 	debug_make_de_jure = {
 		filter = sub_realm_owned
 		ai_target_filter = capital
+		diplomacy_icon = GFX_debug_decision
 		
 		from_potential = {
 			ai = no
@@ -102,6 +105,7 @@ title_decisions = {
 	debug_destroy_title = {
 		filter = all
 		ai_target_filter = capital
+		diplomacy_icon = GFX_debug_decision
 		
 		from_potential = {
 			ai = no
@@ -124,6 +128,7 @@ title_decisions = {
 	debug_create_trade_post = {
 		filter = all
 		ai_target_filter = capital
+		diplomacy_icon = GFX_debug_decision
 		
 		from_potential = {
 			ai = no
@@ -147,6 +152,7 @@ title_decisions = {
 	debug_deactivate_title = {
 		filter = all
 		ai_target_filter = capital
+		diplomacy_icon = GFX_debug_decision
 		
 		from_potential = {
 			ai = no
@@ -170,6 +176,7 @@ title_decisions = {
 	debug_gain_claim_title = {
 		filter = all
 		ai_target_filter = capital
+		diplomacy_icon = GFX_debug_decision
 		
 		from_potential = {
 			ai = no
@@ -192,6 +199,7 @@ title_decisions = {
 	make_prosperous = {
 		ai_target_filter = owned
 		filter = owned
+		diplomacy_icon = GFX_debug_decision
 		
 		from_potential = {
 			has_global_flag = ancrel_debug
@@ -233,6 +241,7 @@ title_decisions = {
 	depopulate = {
 		ai_target_filter = owned
 		filter = owned
+		diplomacy_icon = GFX_debug_decision
 		
 		from_potential = {
 			has_global_flag = ancrel_debug

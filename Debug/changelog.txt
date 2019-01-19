@@ -1,0 +1,16 @@
+----------------------------------------------------------------------------------------------------------------
+v0.2 Next release
+----------------------------------------------------------------------------------------------------------------
+
+- Add Imprison targeted decision
+- Add "Give Malus" targeted decision
+- Add "Play As" targeted decision
+- Add debug logs for on_county_religion_change and on_vassal_accepts_religious_conversion
+- Add debug logs for on_war_started, on_war_ended_victory, on_war_ended_invalid, on_war_ended_whitepeace and on_war_ended_defeat
+- Add icons for intrigue and diplomacy decisions
+
+----------------------------------------------------------------------------------------------------------------
+v0.1 2017-07-23
+----------------------------------------------------------------------------------------------------------------
+
+- Initial release

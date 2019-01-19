@@ -1,0 +1,63 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_debug_decision"
+		texturefile = "gfx\\interface\\debug_diplomacy_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_debug_become_independent"
+		texturefile = "gfx\\interface\\debug_intrigue_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_debug_convert_realm_characters_religion"
+		texturefile = "gfx\\interface\\debug_intrigue_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_debug_convert_realm_characters_culture"
+		texturefile = "gfx\\interface\\debug_intrigue_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_debug_convert_realm_provinves_religion"
+		texturefile = "gfx\\interface\\debug_intrigue_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_debug_convert_realm_provinves_culture"
+		texturefile = "gfx\\interface\\debug_intrigue_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_debug_become_king"
+		texturefile = "gfx\\interface\\debug_intrigue_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_debug_become_emperor"
+		texturefile = "gfx\\interface\\debug_intrigue_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_debug_increase_moral_authority"
+		texturefile = "gfx\\interface\\debug_intrigue_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_debug_decrease_moral_authority"
+		texturefile = "gfx\\interface\\debug_intrigue_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_debug_gain_society_currency_trivial"
+		texturefile = "gfx\\interface\\debug_intrigue_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_debug_gain_society_currency_minor"
+		texturefile = "gfx\\interface\\debug_intrigue_icon.dds"
+	}	
+	spriteType = {
+		name = "GFX_debug_gain_society_currency_medium"
+		texturefile = "gfx\\interface\\debug_intrigue_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_debug_gain_society_currency_major"
+		texturefile = "gfx\\interface\\debug_intrigue_icon.dds"
+	}	
+	spriteType = {
+		name = "GFX_debug_gain_society_currency_massive"
+		texturefile = "gfx\\interface\\debug_intrigue_icon.dds"
+	}	
+}

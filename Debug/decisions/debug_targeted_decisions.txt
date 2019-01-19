@@ -4,6 +4,7 @@ targetted_decisions = {
 
 	debug_vassalize = {
 		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
 		from_potential = {
 			ai = no
 		}
@@ -14,6 +15,29 @@ targetted_decisions = {
 		}
 		effect = {
 			set_defacto_liege = FROM
+			move_character = FROM
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_imprison = {
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			
+		}
+		allow = {
+		}
+		effect = {
+			imprison = FROM
 		}
 		revoke_allowed = {
 			always = no
@@ -25,6 +49,7 @@ targetted_decisions = {
 	
 	debug_grant_independence = {
 		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
 		from_potential = {
 			ai = no
 		}
@@ -49,6 +74,7 @@ targetted_decisions = {
 	
 	debug_usurp = {
 		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
 		from_potential = {
 			ai = no
 		}
@@ -75,6 +101,7 @@ targetted_decisions = {
 	
 	debug_convert_religion = {
 		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
 		from_potential = {
 			ai = no
 		}
@@ -96,6 +123,7 @@ targetted_decisions = {
 	
 	debug_convert_culture = {
 		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
 		from_potential = {
 			ai = no
 		}
@@ -117,6 +145,7 @@ targetted_decisions = {
 	
 	debug_convert_capital_religion = {
 		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
 		from_potential = {
 			ai = no
 		}
@@ -142,6 +171,7 @@ targetted_decisions = {
 	
 	debug_convert_capital_culture = {
 		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
 		from_potential = {
 			ai = no
 		}
@@ -167,6 +197,7 @@ targetted_decisions = {
 	
 	debug_kill = {
 		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
 		from_potential = {
 			ai = no
 		}
@@ -187,6 +218,7 @@ targetted_decisions = {
 	
 	debug_give_boost = {
 		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
 		from_potential = {
 			ai = no
 		}
@@ -212,8 +244,37 @@ targetted_decisions = {
 		}
 	}
 	
+	debug_give_malus = {
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+		}
+		potential = {
+		}
+		allow = {
+		}
+		effect = {
+			piety = -500
+			prestige = -500
+			wealth = -100
+			change_diplomacy = -1
+			change_stewardship = -1
+			change_martial = -1
+			change_intrigue = -1
+			change_learning = -1
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
 	debug_elevate = {
 		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
 		from_potential = {
 			ai = no
 		}
@@ -254,6 +315,7 @@ targetted_decisions = {
 	
 	debug_make_rival = {
 		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
 		from_potential = {
 			ai = no
 		}
@@ -275,6 +337,7 @@ targetted_decisions = {
 	
 	debug_make_friend = {
 		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
 		from_potential = {
 			ai = no
 		}
@@ -288,6 +351,49 @@ targetted_decisions = {
 		}
 		revoke_allowed = {
 			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_play_as = {
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+		}
+		potential = {
+		}
+		allow = {
+		}
+		effect = {
+			FROM = {
+				set_player_character = ROOT
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	# Allows to debug why characters don't show up in the councillor list
+	debug_become_spiritual = {
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+		}
+		potential = {
+		}
+		allow = {
+			can_be_spiritual_trigger = yes
+		}
+		effect = {
+			
 		}
 		ai_will_do = {
 			factor = 0

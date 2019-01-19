@@ -1,6 +1,10 @@
+##### Succession
+
 on_death = {
 	events = {
 		debug.1 # logging
+		
+		debug.100 # play as
 	}
 }
 
@@ -37,4 +41,57 @@ on_exiled = {
 	events = {
 		debug.5 # logging
 	}
+}
+
+##### Religion change 
+
+# ROOT is province, FROM has the old religion.
+on_county_religion_change = {
+	events = {
+		debug.7 # logging
+	}
+}
+
+# FROMFROM is the demander. FROM is the vassal. ROOT is the character.
+on_vassal_accepts_religious_conversion = {
+	events = {
+		debug.8 # logging
+	}	
+}
+
+##### CBs
+
+# FROM = Attacker, ROOT = Defender
+on_war_started = {
+	events = {
+		debug.9 # logging
+	}	
+}
+
+# FROM = Attacker, ROOT = Defender
+on_war_ended_victory = {
+	events = {
+		debug.10 # logging
+	}	
+}
+
+# FROM = Attacker, ROOT = Defender
+on_war_ended_invalid = {
+	events = {
+		debug.11 # logging
+	}	
+}
+
+# FROM = Attacker, ROOT = Defender
+on_war_ended_whitepeace = {
+	events = {
+		debug.12 # logging
+	}	
+}
+
+# FROM = Attacker, ROOT = Defender
+on_war_ended_defeat = {
+	events = {
+		debug.13 # logging
+	}	
 }

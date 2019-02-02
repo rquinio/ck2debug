@@ -29,9 +29,11 @@ debug_usurp_all_de_jure_title; Usurp De Jure;;;;;;;;;;;;;x
 debug_make_de_jure;Make De Jure;;;;;;;;;;;;;x
 debug_gain_claim_title;Gain Claim;;;;;;;;;;;;;x
 debug_destroy_title;Destroy;;;;;;;;;;;;;x
+debug_destroy_title_desc;Destroy the title.;;;;;;;;;;;;;x
 debug_deactivate_title;Deactivate;;;;;;;;;;;;;x
 debug_create_trade_post;Create Tradepost;;;;;;;;;;;;;x
 debug_spawn_army;Spawn Army;;;;;;;;;;;;;x
+debug_spawn_army_desc;Spawn 10,000 event troops in the province.;;;;;;;;;;;;;x
 debug_grant_independence;Grant Independence;;;;;;;;;;;;;x
 debug_play_as;Play As;;;;;;;;;;;;;x
 debug_play_as_desc;Switch player character;;;;;;;;;;;;;x
@@ -40,3 +42,11 @@ debug_gain_society_currency_minor;Gain Minor Society Currency;;;;;;;;;;;;;x
 debug_gain_society_currency_medium;Gain Medium Society Currency;;;;;;;;;;;;;x
 debug_gain_society_currency_major;Gain Major Society Currency;;;;;;;;;;;;;x
 debug_gain_society_currency_massive;Gain Massive Society Currency;;;;;;;;;;;;;x
+debug_increase_prosperity;Increase Prosperity;;;;;;;;;;;;;x
+debug_increase_prosperity_desc;Increase province prosperity or decrease depopulation;;;;;;;;;;;;;x
+debug_decrease_prosperity;Decrease Prosperity;;;;;;;;;;;;;x
+debug_decrease_prosperity_desc;Decrease province prosperity or increase depopulation;;;;;;;;;;;;;x
+debug_cancel_objectives;Cancel Objectives;;;;;;;;;;;;;x
+debug_cancel_objectives_desc;Cancel active focus, ambition and/or plot.;;;;;;;;;;;;;x
+debug_make_capital;Make Capital;;;;;;;;;;;;;x
+debug_make_capital_desc;Make this holding your capital;;;;;;;;;;;;;x

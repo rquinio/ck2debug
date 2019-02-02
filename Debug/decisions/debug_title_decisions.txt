@@ -196,58 +196,67 @@ title_decisions = {
 		}
 	}
 
-	make_prosperous = {
+	debug_increase_prosperity = {
+		filter = all
 		ai_target_filter = owned
-		filter = owned
 		diplomacy_icon = GFX_debug_decision
 		
 		from_potential = {
-			has_global_flag = ancrel_debug
 		}
 		
 		potential = {
-			location = {
-				NOT = { has_province_modifier = prosperity_modifier_3 }
-			}
 		}
 		
-		allow = { }
+		allow = { 
+			location = {
+				NOT = { 
+					has_province_modifier = prosperity_modifier_3
+				}
+			}
+		}
 		
 		effect = {
 			location = {
 				if = {
 					limit = {
-						is_depopulated_trigger = yes
+						NOR = {
+							has_province_modifier = depopulated_3
+							has_province_modifier = depopulated_2
+							has_province_modifier = depopulated_1
+						}
 					}
-					decrease_depopulation_effect = yes
+					increase_prosperity_effect = yes
 				}
 				if = {
 					limit = {
 						OR = {
-							is_prosperous_trigger = yes
-							is_depopulated_trigger = no
+							has_province_modifier = depopulated_3
+							has_province_modifier = depopulated_2
+							has_province_modifier = depopulated_1
 						}
 					}
-					increase_prosperity_effect = yes
+					decrease_depopulation_effect = yes
 				}
 			}
 		}
 		
 		ai_will_do = {
-			factor = 0 # debug only!
+			factor = 0
 		}
 	}
 
-	depopulate = {
+	debug_decrease_prosperity = {
+		filter = all
 		ai_target_filter = owned
-		filter = owned
 		diplomacy_icon = GFX_debug_decision
 		
 		from_potential = {
-			has_global_flag = ancrel_debug
 		}
 		
 		potential = {
+		}
+		
+		allow = { 
 			location = {
 				NOT = {
 					has_province_modifier = depopulated_3
@@ -255,14 +264,33 @@ title_decisions = {
 			}
 		}
 		
-		allow = { }
-		
 		effect = {
-			location = { decrease_prosperity_effect = yes}
+			location = {
+				if = {
+					limit = {
+						NOR = {
+							has_province_modifier = prosperity_modifier_3
+							has_province_modifier = prosperity_modifier_2
+							has_province_modifier = prosperity_modifier_1
+						}
+					}
+					increase_depopulation_effect = yes
+				}
+				if = {
+					limit = {
+						OR = {
+							has_province_modifier = prosperity_modifier_3
+							has_province_modifier = prosperity_modifier_2
+							has_province_modifier = prosperity_modifier_1
+						}
+					}
+					debug_decrease_prosperity_effect = yes
+				}
+			}
 		}
 		
 		ai_will_do = {
-			factor = 0 # debug only!
+			factor = 0
 		}
 	}
 }

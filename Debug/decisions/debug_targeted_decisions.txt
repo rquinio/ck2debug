@@ -17,9 +17,6 @@ targetted_decisions = {
 			set_defacto_liege = FROM
 			move_character = FROM
 		}
-		revoke_allowed = {
-			always = no
-		}
 		ai_will_do = {
 			factor = 0
 		}
@@ -38,9 +35,6 @@ targetted_decisions = {
 		}
 		effect = {
 			imprison = FROM
-		}
-		revoke_allowed = {
-			always = no
 		}
 		ai_will_do = {
 			factor = 0
@@ -63,9 +57,6 @@ targetted_decisions = {
 		}
 		effect = {
 			set_defacto_liege = THIS
-		}
-		revoke_allowed = {
-			always = no
 		}
 		ai_will_do = {
 			factor = 0
@@ -91,9 +82,6 @@ targetted_decisions = {
 				usurp_title_plus_barony_if_unlanded_and_vassals = FROM
 			}
 		}
-		revoke_allowed = {
-			always = no
-		}
 		ai_will_do = {
 			factor = 0
 		}
@@ -113,9 +101,6 @@ targetted_decisions = {
 		effect = {
 			unsafe_religion = FROM
 		}
-		revoke_allowed = {
-			always = no
-		}
 		ai_will_do = {
 			factor = 0
 		}
@@ -134,9 +119,6 @@ targetted_decisions = {
 		}
 		effect = {
 			culture = FROM
-		}
-		revoke_allowed = {
-			always = no
 		}
 		ai_will_do = {
 			factor = 0
@@ -161,9 +143,6 @@ targetted_decisions = {
 				religion = FROM
 			}
 		}
-		revoke_allowed = {
-			always = no
-		}
 		ai_will_do = {
 			factor = 0
 		}
@@ -187,9 +166,6 @@ targetted_decisions = {
 				culture = FROM
 			}
 		}
-		revoke_allowed = {
-			always = no
-		}
 		ai_will_do = {
 			factor = 0
 		}
@@ -207,9 +183,6 @@ targetted_decisions = {
 		}
 		effect = {
 			death = { death_reason = death_execution killer = FROM } 
-		}
-		revoke_allowed = {
-			always = no
 		}
 		ai_will_do = {
 			factor = 0
@@ -236,9 +209,6 @@ targetted_decisions = {
 			change_intrigue = 1
 			change_learning = 1
 		}
-		revoke_allowed = {
-			always = no
-		}
 		ai_will_do = {
 			factor = 0
 		}
@@ -263,9 +233,6 @@ targetted_decisions = {
 			change_martial = -1
 			change_intrigue = -1
 			change_learning = -1
-		}
-		revoke_allowed = {
-			always = no
 		}
 		ai_will_do = {
 			factor = 0
@@ -305,9 +272,6 @@ targetted_decisions = {
 				}
 			}
 		}
-		revoke_allowed = {
-			always = no
-		}
 		ai_will_do = {
 			factor = 0
 		}
@@ -327,9 +291,6 @@ targetted_decisions = {
 		effect = {
 			add_rival = FROM
 		}
-		revoke_allowed = {
-			always = no
-		}
 		ai_will_do = {
 			factor = 0
 		}
@@ -348,9 +309,6 @@ targetted_decisions = {
 		}
 		effect = {
 			add_friend = FROM
-		}
-		revoke_allowed = {
-			always = no
 		}
 		ai_will_do = {
 			factor = 0
@@ -372,8 +330,28 @@ targetted_decisions = {
 				set_player_character = ROOT
 			}
 		}
-		revoke_allowed = {
-			always = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_cancel_objectives = {
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		
+		from_potential = {
+			ai = no
+		}
+		potential = {
+		}
+		allow = {
+		}
+		effect = {
+			ROOT = {
+				clear_focus = yes
+				cancel_ambition = yes
+				cancel_plot  = yes
+			}
 		}
 		ai_will_do = {
 			factor = 0

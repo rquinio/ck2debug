@@ -1,14 +1,5 @@
-# Title decisions are possible vs _all_ titles and are shown in the Title Diplomacy View, not the Intrigue View. The taker is in the FROM scope.
-#
-# filter = [capital/primary_title/owned/vassal_owned/sub_realm_owned/realm_owned/dynasty_owned/all]
-# ai_target_filter = [capital/primary_title/owned/vassal_owned/sub_realm_owned/realm_owned/dynasty_owned/all] (which titles for which the AI evaluates the decision.)
-#	owned: all titles owned by the AI
-#	vassal_owned: all titles owned by direct vassal rulers of the AI's employer
-#	sub_realm_owned: all titles below the AI's employer
-#	realm_owned: all titles in the same top realm as the AI
-#	dynasty_owned: all titles owned by members of the same dynasty
-#	all: all titles (Avoid if possible. VERY CPU-HEAVY!)
-
+# FROM is the decision taker
+# ROOT is the targeted title
 title_decisions = {
 
 	debug_usurp_title = {
@@ -134,9 +125,9 @@ title_decisions = {
 			ai = no
 		}
 		potential = {
+			tier = COUNT
 		}
 		allow = {
-			tier = COUNT
 		}
 		effect = {
 			create_tradepost = yes
@@ -202,9 +193,11 @@ title_decisions = {
 		diplomacy_icon = GFX_debug_decision
 		
 		from_potential = {
+			ai = no
 		}
 		
 		potential = {
+			tier = COUNT
 		}
 		
 		allow = { 
@@ -251,9 +244,11 @@ title_decisions = {
 		diplomacy_icon = GFX_debug_decision
 		
 		from_potential = {
+			ai = no
 		}
 		
 		potential = {
+			tier = COUNT
 		}
 		
 		allow = { 

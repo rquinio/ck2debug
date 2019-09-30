@@ -1,15 +1,18 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
 debug_show_province_id;Province ID: [Root.Location.GetID];;;;;;;;;;;;;x
 debug_show_province_id_desc;Allows to easily access province ID of [Root.Location.GetName];;;;;;;;;;;;;x
-debug_become_independent;Become Independent;;;;;;;;;;;;;x
-debug_convert_realm_characters_religion;Convert Realm Characters to Religion;;;;;;;;;;;;;x
-debug_convert_realm_characters_culture;Convert Realm Characters to Culture;;;;;;;;;;;;;x
-debug_convert_realm_provinves_religion;Convert Realm Provinces to Religion;;;;;;;;;;;;;x
-debug_convert_realm_provinves_culture;Convert Realm Provinces to Culture;;;;;;;;;;;;;x
+debug_become_independent;Make Independent;;;;;;;;;;;;;x
+debug_become_independent_self;Become Independent;;;;;;;;;;;;;x
+debug_convert_realm_characters_religion;Convert Characters to Religion;;;;;;;;;;;;;x
+debug_convert_realm_characters_culture;Convert Characters to Culture;;;;;;;;;;;;;x
+debug_convert_realm_provinves_religion;Convert Provinces to Religion;;;;;;;;;;;;;x
+debug_convert_realm_provinves_culture;Convert Provinces to Culture;;;;;;;;;;;;;x
 debug_become_king;Become King;;;;;;;;;;;;;x
 debug_become_emperor;Become Emperor;;;;;;;;;;;;;x
 debug_increase_moral_authority;Increase Moral Authority;;;;;;;;;;;;;x
+debug_increase_moral_authority_self;Increase Moral Authority;;;;;;;;;;;;;x
 debug_decrease_moral_authority;Decrease Moral Authority;;;;;;;;;;;;;x
+debug_decrease_moral_authority_self;Decrease Moral Authority;;;;;;;;;;;;;x
 debug_vassalize;Vassalize;;;;;;;;;;;;;x
 debug_imprison;Imprison;;;;;;;;;;;;;x
 debug_usurp;Usurp Titles;;;;;;;;;;;;;x
@@ -18,7 +21,7 @@ debug_convert_culture;Convert Culture;;;;;;;;;;;;;x
 debug_convert_capital_religion;Convert Capital Religion;;;;;;;;;;;;;x
 debug_convert_capital_culture;Convert Capital Culture;;;;;;;;;;;;;x
 debug_kill;Kill;;;;;;;;;;;;;x
-debug_kill_desc;;;;;;;;;;;;;;x
+debug_kill_self;Kill;;;;;;;;;;;;;x
 debug_give_boost;Give Boost;;;;;;;;;;;;;x
 debug_give_malus;Give Malus;;;;;;;;;;;;;x
 debug_elevate;Elevate;;;;;;;;;;;;;x
@@ -34,7 +37,6 @@ debug_deactivate_title;Deactivate;;;;;;;;;;;;;x
 debug_create_trade_post;Create Tradepost;;;;;;;;;;;;;x
 debug_spawn_army;Spawn Army;;;;;;;;;;;;;x
 debug_spawn_army_desc;Spawn 10,000 event troops in the province.;;;;;;;;;;;;;x
-debug_grant_independence;Grant Independence;;;;;;;;;;;;;x
 debug_play_as;Play As;;;;;;;;;;;;;x
 debug_play_as_desc;Switch player character;;;;;;;;;;;;;x
 debug_gain_society_currency_trivial;Gain Trivial Society Currency;;;;;;;;;;;;;x
@@ -47,6 +49,8 @@ debug_increase_prosperity_desc;Increase province prosperity or decrease depopula
 debug_decrease_prosperity;Decrease Prosperity;;;;;;;;;;;;;x
 debug_decrease_prosperity_desc;Decrease province prosperity or increase depopulation;;;;;;;;;;;;;x
 debug_cancel_objectives;Cancel Objectives;;;;;;;;;;;;;x
+debug_cancel_objectives_self;Cancel Objectives;;;;;;;;;;;;;x
 debug_cancel_objectives_desc;Cancel active focus, ambition and/or plot.;;;;;;;;;;;;;x
 debug_make_capital;Make Capital;;;;;;;;;;;;;x
 debug_make_capital_desc;Make this holding your capital;;;;;;;;;;;;;x
+debug_become_spiritual;;;;;;;;;;;;;;x

@@ -1,10 +1,17 @@
 ----------------------------------------------------------------------------------------------------------------
+v0.4 Next release
+----------------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------
 v0.3 Next release
 ----------------------------------------------------------------------------------------------------------------
 
+- Move all intrigue decisions to targeted decisions (character, title or settlement)
+- Fix targeted decisions not showing up for the player
 - Add targeted decision to cancel current objectives (ambition, plot, focus)
 - Add targeted decision to change capital holding
 - Rework decisions to increase/decrease province prosperity/depopulation
+- Move "play as" decision to the top
 
 ----------------------------------------------------------------------------------------------------------------
 v0.2 2019-01-19

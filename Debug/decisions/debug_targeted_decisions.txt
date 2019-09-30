@@ -1,6 +1,26 @@
 # FROM is the taker
 # ROOT is the target
 targetted_decisions = {
+	
+	debug_play_as = {
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+		}
+		potential = {
+		}
+		allow = {
+		}
+		effect = {
+			FROM = {
+				set_player_character = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 
 	debug_vassalize = {
 		ai_target_filter = self
@@ -16,6 +36,45 @@ targetted_decisions = {
 		effect = {
 			set_defacto_liege = FROM
 			move_character = FROM
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_become_independent = {
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			is_landed = yes
+			independent = no
+		}
+		allow = {
+		}
+		effect = {
+			set_defacto_liege = THIS
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	debug_become_independent_self = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+		}
+		potential = {
+		}
+		allow = {
+			independent = no
+		}
+		effect = {
+			set_defacto_liege = THIS
 		}
 		ai_will_do = {
 			factor = 0
@@ -41,28 +100,6 @@ targetted_decisions = {
 		}
 	}
 	
-	debug_grant_independence = {
-		ai_target_filter = self
-		diplomacy_icon = GFX_debug_decision
-		from_potential = {
-			ai = no
-		}
-		potential = {
-			FROM = {
-				is_vassal_or_below = ROOT
-			}
-			
-		}
-		allow = {
-		}
-		effect = {
-			set_defacto_liege = THIS
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
 	debug_usurp = {
 		ai_target_filter = self
 		diplomacy_icon = GFX_debug_decision
@@ -76,6 +113,7 @@ targetted_decisions = {
 			}
 		}
 		allow = {
+			is_landed = yes
 		}
 		effect = {
 			any_demesne_title = {
@@ -124,54 +162,26 @@ targetted_decisions = {
 			factor = 0
 		}
 	}
-	
-	debug_convert_capital_religion = {
-		ai_target_filter = self
-		diplomacy_icon = GFX_debug_decision
-		from_potential = {
-			ai = no
-		}
-		potential = {
-			capital_scope = {
-				NOT = { religion = FROM }
-			}
-		}
-		allow = {
-		}
-		effect = {
-			capital_scope = {
-				religion = FROM
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
-	debug_convert_capital_culture = {
-		ai_target_filter = self
-		diplomacy_icon = GFX_debug_decision
-		from_potential = {
-			ai = no
-		}
-		potential = {
-			capital_scope = {
-				NOT = { culture = FROM }
-			}
-		}
-		allow = {
-		}
-		effect = {
-			capital_scope = {
-				culture = FROM
-			}
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	
+
 	debug_kill = {
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+		}
+		potential = {
+		}
+		allow = {
+		}
+		effect = {
+			death = { death_reason = death_execution killer = FROM } 
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	debug_kill_self = {
+		filter = self
 		ai_target_filter = self
 		diplomacy_icon = GFX_debug_decision
 		from_potential = {
@@ -190,6 +200,7 @@ targetted_decisions = {
 	}
 	
 	debug_give_boost = {
+		filter = self
 		ai_target_filter = self
 		diplomacy_icon = GFX_debug_decision
 		from_potential = {
@@ -215,6 +226,7 @@ targetted_decisions = {
 	}
 	
 	debug_give_malus = {
+		filter = self
 		ai_target_filter = self
 		diplomacy_icon = GFX_debug_decision
 		from_potential = {
@@ -315,9 +327,10 @@ targetted_decisions = {
 		}
 	}
 	
-	debug_play_as = {
+	debug_cancel_objectives = {
 		ai_target_filter = self
 		diplomacy_icon = GFX_debug_decision
+		
 		from_potential = {
 			ai = no
 		}
@@ -326,16 +339,18 @@ targetted_decisions = {
 		allow = {
 		}
 		effect = {
-			FROM = {
-				set_player_character = ROOT
+			ROOT = {
+				clear_focus = yes
+				cancel_ambition = yes
+				cancel_plot  = yes
 			}
 		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-	
-	debug_cancel_objectives = {
+	debug_cancel_objectives_self = {
+		filter = self
 		ai_target_filter = self
 		diplomacy_icon = GFX_debug_decision
 		
@@ -372,6 +387,412 @@ targetted_decisions = {
 		}
 		effect = {
 			
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_gain_society_currency_trivial = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+		}
+		potential = {
+		}
+		allow = {
+			is_in_society = yes
+		}
+		effect = {
+			add_society_currency_trivial_effect = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	debug_gain_society_currency_minor = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+		}
+		potential = {
+		}
+		allow = {
+			is_in_society = yes
+		}
+		effect = {
+			add_society_currency_minor_effect = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	debug_gain_society_currency_medium = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+		}
+		potential = {
+		}
+		allow = {
+			is_in_society = yes
+		}
+		effect = {
+			add_society_currency_medium_effect = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	debug_gain_society_currency_major = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+		}
+		potential = {
+		}
+		allow = {
+			is_in_society = yes
+		}
+		effect = {
+			add_society_currency_major_effect = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	debug_gain_society_currency_massive = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+		}
+		potential = {
+		}
+		allow = {
+			is_in_society = yes
+		}
+		effect = {
+			add_society_currency_massive_effect = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_increase_moral_authority = {
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			NOT = { religion_authority = 1 }
+		}
+		allow = {}
+		effect = {
+			religion_authority = { modifier = debug_increase } 
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	debug_increase_moral_authority_self = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			NOT = { religion_authority = 1 }
+		}
+		allow = {}
+		effect = {
+			religion_authority = { modifier = debug_increase } 
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_decrease_moral_authority = {
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			religion_authority = 0.01
+		}
+		allow = {}
+		effect = {
+			religion_authority = { modifier = debug_decrease } 
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	debug_decrease_moral_authority = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			religion_authority = 0.01
+		}
+		allow = {}
+		effect = {
+			religion_authority = { modifier = debug_decrease } 
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	
+	debug_become_king = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			tier = DUKE
+			NOT = { tier = KING }
+		}
+		allow = {
+			independent = yes
+		}
+		effect = {
+			primary_title = {
+				create_title = {
+					tier = KING
+					landless = no
+					temporary = no
+					custom_created = yes
+					culture = ROOT
+					holder = ROOT
+					base_title = THIS
+					copy_title_laws = yes
+				}
+
+				hidden_tooltip = {
+					empire = {
+						ROOT = {
+							primary_title = {
+								de_jure_liege = PREVPREV
+							}
+						}
+					}
+
+					ROOT = {
+						primary_title = {
+							holder_scope = {
+								any_title_under = {
+									limit = {
+										tier = DUKE
+										kingdom = {
+											has_holder = no
+										}
+									}
+									de_jure_liege = PREVPREV
+								}
+								any_title_under = {
+									limit = {
+										tier = COUNT
+										location = {
+											duchy = {
+												kingdom = {
+													has_holder = no
+												}
+												
+												NOT = { de_jure_liege_or_above = PREVPREVPREVPREV }
+												ROOT = {
+													completely_controls = PREV
+												}
+											}
+										}
+									}
+									location = {
+										duchy = {
+											de_jure_liege = PREVPREVPREVPREV
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+			}
+			custom_tooltip = { text = form_new_kingdom_tooltip }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_become_emperor = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			tier = KING
+			NOT = { tier = EMPEROR }
+		}
+		allow = {
+			independent = yes
+		}
+		effect = {
+			primary_title = {
+				create_title = {
+					tier = EMPEROR
+					landless = no
+					temporary = no
+					custom_created = yes
+					culture = ROOT
+					holder = ROOT
+					base_title = THIS
+					copy_title_laws = yes
+				}
+
+				hidden_tooltip = {
+					ROOT = {
+						primary_title = {
+							holder_scope = {
+								any_title_under = {
+									limit = {
+										tier = KING
+										empire = {
+											has_holder = no
+										}
+									}
+									de_jure_liege = PREVPREV
+								}
+								any_title_under = {
+									limit = {
+										tier = DUKE
+										location = {
+											kingdom = {
+												empire = {
+													has_holder = no
+												}
+												
+												NOT = { de_jure_liege_or_above = PREVPREVPREVPREV }
+												ROOT = {
+													completely_controls = PREV
+												}
+											}
+										}
+									}
+									location = {
+										kingdom = {
+											de_jure_liege = PREVPREVPREVPREV
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			custom_tooltip = { text = form_new_empire_tooltip }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_convert_realm_characters_religion = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		
+		from_potential = {
+			ai = no
+		}
+		allow = {}
+		effect = {
+			any_realm_character = {
+				religion = FROM
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_convert_realm_characters_culture = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		
+		from_potential = {
+			ai = no
+		}
+		allow = {}
+		effect = {
+			any_realm_character = {
+				culture = FROM
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_convert_realm_provinves_religion = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		
+		from_potential = {
+			ai = no
+		}
+		allow = {}
+		effect = {
+			any_realm_province = {
+				religion = FROM
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_convert_realm_provinves_culture = {
+		filter = self
+		ai_target_filter = self
+		diplomacy_icon = GFX_debug_decision
+		
+		from_potential = {
+			ai = no
+		}
+		allow = {}
+		effect = {
+			any_realm_province = {
+				culture = FROM
+			}
 		}
 		ai_will_do = {
 			factor = 0

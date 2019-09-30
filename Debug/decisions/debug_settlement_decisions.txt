@@ -178,4 +178,48 @@ settlement_decisions = {
 			factor = 0
 		}	
 	}
+	
+	debug_convert_religion = {
+		filter = all
+		ai_target_filter = owned
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			NOT = { religion = FROM }
+		}
+		allow = {
+		}
+		effect = {
+			location = {
+				religion = FROM
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	debug_convert_culture = {
+		filter = all
+		ai_target_filter = owned
+		diplomacy_icon = GFX_debug_decision
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			NOT = { culture = FROM }
+		}
+		allow = {
+		}
+		effect = {
+			location = {
+				culture = FROM	
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 }

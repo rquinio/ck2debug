@@ -59,6 +59,13 @@ on_vassal_accepts_religious_conversion = {
 	}	
 }
 
+# ROOT is the character, FROM is the old religion
+on_character_convert_religion = {
+	events = {
+		debug.14 # logging
+	}
+}
+
 ##### CBs
 
 # FROM = Attacker, ROOT = Defender

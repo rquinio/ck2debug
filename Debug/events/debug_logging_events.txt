@@ -155,3 +155,15 @@ character_event = {
 		log="(DEBUG) [From.GetBestName] has lost the war to [Root.GetBestName]."
 	}
 }
+
+# on_character_convert_religion
+character_event = {
+	id = debug.14
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		log="(DEBUG) [Root.GetBestName] has converted from [From.GetName] to [Root.Religion.GetName]."
+	}
+}
